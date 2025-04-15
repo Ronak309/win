@@ -1,13 +1,17 @@
 services:
-  qemu:
-    image: qemux/qemu
-    container_name: qemu
+  windows:
+    image: dockurr/windows
+    container_name: windows
     environment:
-      BOOT: "https://archive.org/download/en_windows_server_2022x64_dvd_/en_windows_server_2022x64_dvd_.iso"
-      DISK_SIZE: "128G"
-      RAM_SIZE: "4G"
+      VERSION: "https://archive.org/download/win-10-english-1507-x-64/Win10_English1507_x64.iso"
+      LANGUAGE: English
+      REGION: en-GB
+      KEYBOARD: en-GB
+      DISK_SIZE: 62GB
+      RAM_SIZE: 4G
       CPU_CORES: "4"
-      DISK_TYPE: "blk"
+      USERNAME: Ronak
+      PASSWORD: R11
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -15,7 +19,9 @@ services:
       - NET_ADMIN
     ports:
       - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
     volumes:
-      - ./qemu:/storage
+      - ./windows:/storage
     restart: always
     stop_grace_period: 2m
