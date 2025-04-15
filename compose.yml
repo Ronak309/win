@@ -4,15 +4,10 @@ services:
     container_name: qemu
     environment:
       BOOT: "https://archive.org/download/en_windows_server_2022x64_dvd_/en_windows_server_2022x64_dvd_.iso"
-      BOOT_MODE: "legacy
-      DISK_TYPE: "blk"
-      REGION: en-GB
-      KEYBOARD: en-GB
-      DISK_SIZE: 62GB
-      RAM_SIZE: 4G
+      DISK_SIZE: "128G"
+      RAM_SIZE: "8G"
       CPU_CORES: "4"
-      USERNAME: Docker
-      PASSWORD: Gates
+      DISK_TYPE: "blk"
     devices:
       - /dev/kvm
       - /dev/net/tun
