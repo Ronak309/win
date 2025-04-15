@@ -5,7 +5,7 @@ services:
     environment:
       BOOT: "https://archive.org/download/en_windows_server_2022x64_dvd_/en_windows_server_2022x64_dvd_.iso"
       DISK_SIZE: "128G"
-      RAM_SIZE: "8G"
+      RAM_SIZE: "4G"
       CPU_CORES: "4"
       DISK_TYPE: "blk"
     devices:
