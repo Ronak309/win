@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "https://archive.org/download/win-10-english-1507-x-64/Win10_English1507_x64.iso"
+      VERSION: "win10"
       LANGUAGE: English
       REGION: en-GB
       KEYBOARD: en-GB
@@ -22,6 +22,6 @@ services:
       - 3389:3389/tcp
       - 3389:3389/udp
     volumes:
-      - ./windows:/storage
+      - ./tmp:/storage
     restart: always
     stop_grace_period: 2m
