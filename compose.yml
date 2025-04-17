@@ -3,7 +3,7 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "win10"
+      VERSION: "https://archive.org/download/6.2.8250.0.winmain-win-8beta.-120217-1520-amd-64fre-client-prerelease-retail-en-_202406/6.2.8250.0.winmain_win8beta.120217-1520_amd64fre_client-prerelease_retail_en-us-HB1_CCPA_X64FRE_EN-US_DV5.iso"
       LANGUAGE: English
       REGION: en-GB
       KEYBOARD: en-GB
